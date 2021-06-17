@@ -1,3 +1,65 @@
 // @import 'vars'; если используете scss-переменные - подключите сюда vars, но удалите root из _vars.scss
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+// * {
+// 	outline: 1px solid red;
+// }
+
+img {
+	max-width: 100%;
+	display: block;
+}
+
+.page {
+	font-size: 15px;
+	background-color: #fff;
+}
+
+.wrapper {
+	max-width: 1920px;
+	margin: 0 auto;
+
+	background-color: #fff;
+}
 
 @import "./components/header";
+
+.container {
+	max-width: 1300px;
+	margin: 0 auto;
+	padding: 0;
+	overflow: hidden;
+
+	p {
+		font-family: Roboto;
+		font-weight: 700;
+		font-size: 30px;
+		color: #000;
+	}
+}
+
+.home {
+	padding: 0;
+	margin: 0;
+	position: relative;
+
+	&-canvas {
+		padding: 0;
+		margin: 0;
+	}
+
+	&-info {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+
+		color: #fff;
+	}
+}

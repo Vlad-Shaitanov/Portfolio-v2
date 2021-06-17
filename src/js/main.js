@@ -5,8 +5,7 @@
   * //@returns {number}
   */
 
-import greeting from "./components/greeting.js";
+import headAnimation from "./components/headAnim.js";
 
-greeting();
-greeting();
+headAnimation();
 

@@ -45,5 +45,7 @@
 		"stylelint-scss": "^3.18.0",
 		"webpack-stream": "^6.1.2"
 	},
-	"dependencies": {}
+	"dependencies": {
+		"core-js": "^3.14.0"
+	}
 }
