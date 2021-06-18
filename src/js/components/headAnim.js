@@ -174,5 +174,17 @@ const headAnimation = () => {
 	}());
 };
 
-export default headAnimation;
+const headText = () => {
+	// let tl = gsap.timeline({ repeatDelay: 1 });
+	// tl.to(".one", { duration: 0.2, x: 100, y: -10, opacity: 1 });
+	// tl.to(".two", { duration: 0.2, x: 120, y: -10, opacity: 1 });
+	// tl.to(".three", { duration: 0.2, x: 140, y: -10, opacity: 1 });
+
+
+	let tl2 = gsap.timeline({ delay: 2, repeat: -1 });
+	tl2.to(".greetings-text", { duration: 3, text: "Junior Web-Developer", delay: 3, left: "22%" });
+	tl2.to(".greetings-text", { duration: 3, text: "Vladislav Shaitanov", delay: 3, left: "25%" });
+};
+
+export { headAnimation, headText };
 

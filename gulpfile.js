@@ -67,6 +67,10 @@ const scripts = () => {
 		.pipe(concat('vendor.js'))
 		.pipe(gulpif(isProd, uglify().on("error", notify.onError())))
 		.pipe(dest('./app/js/'));
+	src('./src/js/libs/**.js')
+		.pipe(concat('libs.js'))
+		.pipe(gulpif(isProd, uglify().on("error", notify.onError())))
+		.pipe(dest('./app/js/'));
 	return src("./src/js/main.js")
 		.pipe(webpack({
 			mode: 'development',

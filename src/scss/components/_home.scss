@@ -1,0 +1,54 @@
+.home {
+	padding: 0;
+	margin: 0;
+	position: relative;
+
+	&-canvas {
+		padding: 0;
+		margin: 0;
+
+		canvas {
+			display: block;
+		}
+	}
+
+	&-info {
+		h2 {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+
+			color: #fff;
+		}
+	}
+}
+
+.phrase {
+	display: flex;
+	width: 100%;
+	margin: 30px auto;
+	overflow: hidden;
+}
+
+.word {
+	font-size: 50px;
+	transform: translateY(200%);
+	opacity: 0;
+}
+
+.greetings {
+	// border-top: 1px solid #000;
+	display: flex;
+	justify-content: center;
+}
+
+.greetings-text {
+	position: absolute;
+	top: 45%;
+	left: 25%;
+	text-align: center;
+	color: #fff;
+	font-size: 70px;
+	font-weight: 700;
+	font-family: Roboto;
+}

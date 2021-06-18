@@ -5,7 +5,8 @@
   * //@returns {number}
   */
 
-import headAnimation from "./components/headAnim.js";
+import { headAnimation, headText } from "./components/headAnim.js";
 
 headAnimation();
+headText();
 
