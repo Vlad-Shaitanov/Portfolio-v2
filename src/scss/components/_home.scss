@@ -52,3 +52,19 @@
 	font-weight: 700;
 	font-family: Roboto;
 }
+
+@media (max-width: 769px) {
+	.greetings-text {
+		top: 45%;
+		left: 3%;
+		font-size: 60px;
+	}
+}
+
+// @media (max-width: 824px) {
+// 	.greetings-text {
+// 		top: 45%;
+// 		left: 7%;
+// 		font-size: 60px;
+// 	}
+// }

@@ -1,9 +1,182 @@
-//
-// .site-container {
-// 	p {
-// 		font-family: Roboto;
-// 		font-weight: 700;
-// 		font-size: 30px;
-// 		color: #000;
-// 	}
-// }
+.header {
+	display: grid;
+	grid-template: minmax(40px, 1fr) / minmax(1px, 1fr) 1fr;
+	max-width: 1300px;
+	background-color: red;
+
+	transition: 0.7s ease;
+	transition-property: transform, box-shadow;
+	//height: 50px;
+	position: fixed;
+	// left: 0;
+	// top: 0;
+	width: 100%;
+	// max-width: inherit;
+	z-index: 100;
+	transform: translateY(-100%);
+
+	&-wrap {
+		position: relative;
+
+		&-double {
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	}
+
+	&.isShown {
+		box-shadow: 0 0 10px black;
+		transform: translateY(0);
+	}
+
+	&_menu {
+		display: flex;
+		align-content: center;
+	}
+
+	&_list {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		&:last-child {
+			padding-right: 20px;
+		}
+		a {
+			font-size: 20px;
+			color: #fff;
+		}
+
+		li {
+			position: relative;
+			&::before {
+				content: "";
+				display: block;
+				bottom: -30%;
+				left: 0;
+				position: absolute;
+				width: 0;
+				height: 2px;
+				background-color: #fff;
+				transition: width 0.3s ease-in-out;
+			}
+
+			&:hover {
+				&::before {
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	&-link {
+	}
+}
+
+@media (max-width: 1024px) {
+	body {
+		&.lock {
+			/*Запрет скролла при открытом меню*/
+			overflow: hidden;
+		}
+	}
+	.header__burger {
+		display: block;
+		position: relative;
+		width: 30px;
+		height: 20px;
+		z-index: 15;
+		margin-right: 30px;
+		margin-top: 7px;
+
+		span {
+			position: absolute;
+			background-color: #fff;
+			left: 0;
+			width: 100%;
+			height: 2px;
+			top: 9px;
+			transition: all 0.3s ease 0s;
+		}
+
+		&::before,
+		&::after {
+			content: "";
+			background-color: #fff;
+			position: absolute;
+			width: 100%;
+			height: 2px;
+			left: 0;
+			transition: all 0.3s ease 0s;
+		}
+
+		&::before {
+			top: 0;
+		}
+
+		&::after {
+			bottom: 0;
+		}
+	}
+
+	.header__burger {
+		&.active {
+			&::before {
+				transform: rotate(45deg);
+				top: 9px;
+			}
+		}
+	}
+
+	.header__burger {
+		&.active {
+			&::after {
+				transform: rotate(-45deg);
+				bottom: 9px;
+			}
+		}
+	}
+
+	.header__burger {
+		&.active {
+			span {
+				transform: scale(0);
+			}
+		}
+	}
+
+	.header_menu {
+		position: fixed;
+		top: -540%;
+		left: 0;
+		width: 100%;
+		height: auto;
+		overflow: auto;
+		background-color: red;
+		padding: 20px 10px 20px 10px;
+		transition: all 0.3s ease 0s;
+
+		&.active {
+			top: -15%;
+		}
+	}
+
+	.header_list {
+		display: block;
+
+		li {
+			margin: 0 0 5px 0;
+		}
+	}
+
+	.header_link {
+		&::before {
+			content: "";
+			display: block;
+			bottom: -15%;
+			left: 0;
+		}
+	}
+}

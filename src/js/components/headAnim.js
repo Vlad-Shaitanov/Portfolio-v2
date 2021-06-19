@@ -174,17 +174,114 @@ const headAnimation = () => {
 	}());
 };
 
+/*===== Анимация текста на главной секции =====*/
 const headText = () => {
 	// let tl = gsap.timeline({ repeatDelay: 1 });
 	// tl.to(".one", { duration: 0.2, x: 100, y: -10, opacity: 1 });
 	// tl.to(".two", { duration: 0.2, x: 120, y: -10, opacity: 1 });
 	// tl.to(".three", { duration: 0.2, x: 140, y: -10, opacity: 1 });
 
+	// const home = document.querySelector(".home");
+	// let tl1 = gsap.timeline({ delay: 2, repeat: -1 });
+	// tl1.to(".greetings-text", { duration: 3, text: "Junior Web-Developer", delay: 3, left: "22%" });
+	// tl1.to(".greetings-text", { duration: 3, text: "Vladislav Shaitanov", delay: 3, left: "25%" });
 
-	let tl2 = gsap.timeline({ delay: 2, repeat: -1 });
-	tl2.to(".greetings-text", { duration: 3, text: "Junior Web-Developer", delay: 3, left: "22%" });
-	tl2.to(".greetings-text", { duration: 3, text: "Vladislav Shaitanov", delay: 3, left: "25%" });
+	// window.addEventListener("resize", () => {
+	// 	let homeWidth = getComputedStyle(home).width;
+	// 	console.log(homeWidth);
+	// 	tl1.kill();
+
+	// 	let tl2 = gsap.timeline({ delay: 2, repeat: -1 });// width <= 768
+	// 	let tl3 = gsap.timeline({ delay: 2, repeat: -1 });// Width > 768
+	// 	if (homeWidth.replace(/\D/g, "") <= 768) {
+	// 		console.log("Well done");
+	// 		tl3.clear();
+	// 		tl2.clear();
+	// 		tl2.to(".greetings-text", { duration: 3, text: "Junior Web-Developer", delay: 3, left: "0%" });
+	// 		tl2.to(".greetings-text", { duration: 3, text: "Vladislav Shaitanov", delay: 3, left: "3%" });
+	// 	} else if (homeWidth.replace(/\D/g, "") > 768) {
+	// 		console.log("not yet");
+	// 		tl2.clear();
+	// 		tl3.clear();
+
+	// 		tl3.to(".greetings-text", { duration: 3, text: "Junior Web-Developer", delay: 3, left: "22%" });
+	// 		tl3.to(".greetings-text", { duration: 3, text: "Vladislav Shaitanov", delay: 3, left: "25%" });
+	// 	}
+	// });
+
+	const home = document.querySelector(".home");
+	let homeWidth = getComputedStyle(home).width;
+
+	const toggleAnim = (clear = 0) => {
+		let tl1 = gsap.timeline({ delay: 2, repeat: -1 });
+		let tl3 = gsap.timeline({ delay: 2, repeat: -1 });
+		if (homeWidth.replace(/\D/g, "") <= 768) {
+			if (clear == 1) {
+				tl1.kill();
+				tl3.kill();
+				console.log("<= 768");
+
+			}
+			tl1.to(".greetings-text", { duration: 3, text: "Junior Web-Developer", delay: 3 });
+			tl1.to(".greetings-text", { duration: 3, text: "Vladislav Shaitanov", delay: 3 });
+		}
+		if (homeWidth.replace(/\D/g, "") >= 769) {
+			if (clear == 1) {
+				tl1.kill();
+				tl3.kill();
+				console.log("> 768");
+			}
+			tl3.to(".greetings-text", { duration: 3, text: "Junior Web-Developer", delay: 3, left: "22%" });
+			tl3.to(".greetings-text", { duration: 3, text: "Vladislav Shaitanov", delay: 3, left: "25%" });
+		}
+	};
+
+	toggleAnim();
+
+	window.addEventListener("resize", () => {
+		toggleAnim(1);
+	});
+
 };
 
-export { headAnimation, headText };
+const headerSticky = () => {
+	const header = document.querySelector('.header');
+
+	const toggleHeaderView = function () {
+		let isShown = window.pageYOffset > window.innerHeight / 2;
+		header.classList.toggle('isShown', isShown);
+	};
+
+	toggleHeaderView();
+	window.addEventListener('scroll', toggleHeaderView);
+};
+
+/*===== Бургер-меню =====*/
+const burger = () => {
+
+	const headerBurger = document.querySelector(".header__burger");
+	const headerMenu = document.querySelector(".header_menu");
+	const headerLinks = document.querySelector(".header_list");
+
+	const toggleClass = () => {
+		headerBurger.classList.toggle("active");
+		headerMenu.classList.toggle("active");
+		document.body.classList.toggle("lock");
+	};
+
+	headerBurger.addEventListener("click", () => {
+		toggleClass();
+	});
+
+	headerLinks.addEventListener("click", event => {
+		const target = event.target;
+		console.log(target);
+
+		if (target.classList.contains("header_link")) {
+			toggleClass();
+		}
+	});
+};
+
+export { headAnimation, headText, headerSticky, burger };
 

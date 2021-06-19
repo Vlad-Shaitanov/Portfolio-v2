@@ -5,8 +5,12 @@
   * //@returns {number}
   */
 
-import { headAnimation, headText } from "./components/headAnim.js";
+import { headAnimation, headText, headerSticky, burger } from "./components/headAnim.js";
 
-headAnimation();
-headText();
+window.addEventListener("DOMContentLoaded", () => {
+	headAnimation();
+	headText();
+	headerSticky();
+	burger();
+});
 
