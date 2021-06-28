@@ -1,0 +1,47 @@
+[
+	{
+		"id": 0,
+		"img": "./img/geAAAgC5Y-A-1920.jpg",
+		"title": "Заголовок 1",
+		"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+		"revInfo": "Lorem ipsum dolor sit amet consectetur adipisicing",
+		"sourceLink": "https://github.com/Vlad-Shaitanov",
+		"siteLink": "#"
+	},
+	{
+		"id": 1,
+		"img": "./img/geAAAgC5Y-A-1920.jpg",
+		"title": "Заголовок 2",
+		"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam cupiditate accusantium dolore et ratione quasi libero officia reprehenderit accusamus, rem praesentium enim doloribus, quae eum voluptatibus necessitatibus possimus ipsum alias.",
+		"revInfo": "Lorem ipsum dolor sit amet consectetur adipisicing",
+		"sourceLink": "https://github.com/Vlad-Shaitanov",
+		"siteLink": "#"
+	},
+	{
+		"id": 2,
+		"img": "./img/geAAAgC5Y-A-1920.jpg",
+		"title": "Заголовок 3",
+		"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam cupiditate accusantium dolore et ratione quasi libero officia reprehenderit accusamus, rem praesentium.",
+		"revInfo": "Lorem ipsum dolor sit amet consectetur adipisicing",
+		"sourceLink": "https://github.com/Vlad-Shaitanov",
+		"siteLink": "#"
+	},
+	{
+		"id": 3,
+		"img": "./img/geAAAgC5Y-A-1920.jpg",
+		"title": "Заголовок 4",
+		"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam cupiditate.",
+		"revInfo": "Lorem ipsum dolor sit amet consectetur adipisicing",
+		"sourceLink": "https://github.com/Vlad-Shaitanov",
+		"siteLink": "#"
+	},
+	{
+		"id": 4,
+		"img": "./img/geAAAgC5Y-A-1920.jpg",
+		"title": "Заголовок 4",
+		"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam cupiditate.",
+		"revInfo": "Lorem ipsum dolor sit amet consectetur adipisicing",
+		"sourceLink": "https://github.com/Vlad-Shaitanov",
+		"siteLink": "#"
+	}
+]
