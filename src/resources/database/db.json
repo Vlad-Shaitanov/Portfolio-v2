@@ -1,47 +1,74 @@
 [
 	{
 		"id": 0,
-		"img": "./img/geAAAgC5Y-A-1920.jpg",
-		"title": "Заголовок 1",
-		"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-		"revInfo": "Lorem ipsum dolor sit amet consectetur adipisicing",
-		"sourceLink": "https://github.com/Vlad-Shaitanov",
-		"siteLink": "#"
+		"img": "./img/works/karla-blog.jpg",
+		"title": "Karla's blog minimal",
+		"description": "Моя первая самостоятельная работа. Верстка блога в минималистичном стиле.",
+		"revInfo": "В работе использованы:<br><br>- html5<br>- css3<br>- sass<br>- flexbox",
+		"sourceLink": "https://github.com/Vlad-Shaitanov/Karla_minimal",
+		"siteLink": "https://vlad-shaitanov.github.io/Karla_minimal/"
 	},
 	{
 		"id": 1,
-		"img": "./img/geAAAgC5Y-A-1920.jpg",
-		"title": "Заголовок 2",
-		"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam cupiditate accusantium dolore et ratione quasi libero officia reprehenderit accusamus, rem praesentium enim doloribus, quae eum voluptatibus necessitatibus possimus ipsum alias.",
-		"revInfo": "Lorem ipsum dolor sit amet consectetur adipisicing",
-		"sourceLink": "https://github.com/Vlad-Shaitanov",
-		"siteLink": "#"
+		"img": "./img/works/mom-blog.jpg",
+		"title": "Блог для мам",
+		"description": "Верстка классического блога на тему материнства.",
+		"revInfo": "В работе использованы:<br><br>- html5<br>- css3<br>- sass<br>- flexbox",
+		"sourceLink": "https://github.com/Vlad-Shaitanov/Mommy_Blog",
+		"siteLink": "https://vlad-shaitanov.github.io/Mommy_Blog/"
 	},
 	{
 		"id": 2,
-		"img": "./img/geAAAgC5Y-A-1920.jpg",
-		"title": "Заголовок 3",
-		"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam cupiditate accusantium dolore et ratione quasi libero officia reprehenderit accusamus, rem praesentium.",
-		"revInfo": "Lorem ipsum dolor sit amet consectetur adipisicing",
-		"sourceLink": "https://github.com/Vlad-Shaitanov",
-		"siteLink": "#"
+		"img": "./img/works/tour-template.jpg",
+		"title": "Путешествия",
+		"description": "Один из вариантов реализации сайта для тур-оператора.",
+		"revInfo": "В работе использованы:<br><br>- html5<br>- css3<br>- sass<br>- flexbox<br>- grid<br>- javascript",
+		"sourceLink": "https://github.com/Vlad-Shaitanov/Websites/tree/master/Travel%20Tours(template)",
+		"siteLink": "https://vlad-shaitanov.github.io/TRAVEL-TOUR/"
 	},
 	{
 		"id": 3,
-		"img": "./img/geAAAgC5Y-A-1920.jpg",
-		"title": "Заголовок 4",
-		"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam cupiditate.",
-		"revInfo": "Lorem ipsum dolor sit amet consectetur adipisicing",
-		"sourceLink": "https://github.com/Vlad-Shaitanov",
-		"siteLink": "#"
+		"img": "./img/works/yoga.jpg",
+		"title": "Йога-туры",
+		"description": "Сервис по организации оздоровительных йога-туров в Индию.",
+		"revInfo": "В работе использованы:<br><br>- html5<br>- css3<br>- sass<br>- flexbox<br>- bootstrap grid<br>- javascript",
+		"sourceLink": "https://github.com/Vlad-Shaitanov/Websites/tree/master/YOGA_tours",
+		"siteLink": "https://vlad-shaitanov.github.io/YOGA-TOURS/"
 	},
 	{
 		"id": 4,
-		"img": "./img/geAAAgC5Y-A-1920.jpg",
-		"title": "Заголовок 4",
-		"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam cupiditate.",
-		"revInfo": "Lorem ipsum dolor sit amet consectetur adipisicing",
-		"sourceLink": "https://github.com/Vlad-Shaitanov",
-		"siteLink": "#"
+		"img": "./img/works/stm.jpg",
+		"title": "Тестовое задание",
+		"description": "Реализация таблицы пользователей с фильтрацией по имени и фамилии.",
+		"revInfo": "В работе использованы:<br><br>- javascript<br>- сервис <a href='https://randomuser.me' target='_blanc'>randomuser</a>",
+		"sourceLink": "https://github.com/Vlad-Shaitanov/Test-Tasks/tree/master/STM-dec2020",
+		"siteLink": "https://vlad-shaitanov.github.io/STM/"
+	},
+	{
+		"id": 5,
+		"img": "./img/works/chthonic.jpg",
+		"title": "Промо",
+		"description": "Промо-страница с товарами музыкальной группы",
+		"revInfo": "В работе использованы:<br><br>- html5<br>- css3<br>- sass<br>- grid",
+		"sourceLink": "https://github.com/Vlad-Shaitanov/Websites/tree/master/Band%20merch",
+		"siteLink": "https://vlad-shaitanov.github.io/BAND-MERCH/"
+	},
+	{
+		"id": 6,
+		"img": "./img/works/radmir.jpg",
+		"title": "Тестовое задание",
+		"description": "Промо-страница для онлайн-игры",
+		"revInfo": "В работе использованы:<br><br>- html5<br>- css3<br>- sass<br>- flexbox<br>- javascript",
+		"sourceLink": "https://github.com/Vlad-Shaitanov/UpFly-Test",
+		"siteLink": "https://vlad-shaitanov.github.io/UpFly-Test/"
+	},
+	{
+		"id": 7,
+		"img": "./img/works/awax.jpg",
+		"title": "Тестовое задание",
+		"description": "Верстка по макету с последующей посадкой на Wordpress(бэкап версии на Wordpress лежит в исходниках).",
+		"revInfo": "В работе использованы:<br><br>- html5<br>- css3<br>- sass<br>- flexbox<br>- javascript<br>- Wordpress",
+		"sourceLink": "https://github.com/Vlad-Shaitanov/Test-Tasks/tree/master/TOP7-march2021",
+		"siteLink": "https://vlad-shaitanov.github.io/AWAX-TOP7-/"
 	}
 ]
