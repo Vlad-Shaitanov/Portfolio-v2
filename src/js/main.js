@@ -51,7 +51,20 @@ const renderCards = () => {
 		});
 };
 
+//Перемещение по пунктам меню
+const scrolling = () => {
+	const navLinks = document.querySelectorAll(".header_link");
 
+	navLinks.forEach(link => {
+
+		link.addEventListener("click", () => {
+			const coords = link.getAttribute('data-to');
+
+			gsap.to(window, { duration: 2, scrollTo: { y: `#${coords}`, offsetY: 70 } });
+		});
+	});
+};
+scrolling();
 
 window.addEventListener("DOMContentLoaded", () => {
 	startPreloader();
