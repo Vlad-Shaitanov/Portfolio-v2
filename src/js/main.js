@@ -66,6 +66,19 @@ const scrolling = () => {
 };
 scrolling();
 
+const divs = document.querySelectorAll(".title-anim-item div");
+divs.forEach(div => {
+	div.addEventListener("mouseenter", () => {
+
+		gsap.to(div, { duration: 0.5, y: -20, scaleX: 1.5, color: "red" });
+	});
+
+	div.addEventListener("mouseleave", () => {
+
+		gsap.to(div, { duration: 0.5, y: 0, scaleX: 1, ease: "bounce", color: "#fff" });
+	});
+});
+
 window.addEventListener("DOMContentLoaded", () => {
 	startPreloader();
 	headAnimation();
