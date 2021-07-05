@@ -7,6 +7,7 @@
 
 import { headAnimation, headText, headerSticky, burger } from "./components/headAnim.js";
 import { workCards, createCards } from "./components/works.js";
+import accordion from "./components/history";
 
 const startPreloader = () => {
 	//Обработка стартовой анимации
@@ -66,26 +67,33 @@ const scrolling = () => {
 };
 scrolling();
 
-const divs = document.querySelectorAll(".title-anim-item div");
-divs.forEach(div => {
-	div.addEventListener("mouseenter", () => {
+const titlesAnimation = () => {
 
-		gsap.to(div, { duration: 0.5, y: -20, scaleX: 1.5, color: "red" });
+	const divs = document.querySelectorAll(".title-anim-item div");
+	divs.forEach(div => {
+		div.addEventListener("mouseenter", () => {
+
+			gsap.to(div, { duration: 0.5, y: -20, scaleX: 1.5, color: "red" });
+		});
+
+		div.addEventListener("mouseleave", () => {
+
+			gsap.to(div, { duration: 0.5, y: 0, scaleX: 1, ease: "bounce", color: "#fff" });
+		});
 	});
+};
 
-	div.addEventListener("mouseleave", () => {
-
-		gsap.to(div, { duration: 0.5, y: 0, scaleX: 1, ease: "bounce", color: "#fff" });
-	});
-});
+startPreloader();
 
 window.addEventListener("DOMContentLoaded", () => {
-	startPreloader();
+	// startPreloader();
 	headAnimation();
 	headText();
 	headerSticky();
 	burger();
 	renderCards();
+	titlesAnimation();
+	accordion("accordion-head--active", "accordion-content--active", 40);
 	//workCards();
 });
 

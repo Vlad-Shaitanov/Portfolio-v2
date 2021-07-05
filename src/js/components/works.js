@@ -44,7 +44,7 @@ const workCards = () => {
 
 	const cards = document.querySelectorAll(".card");
 	const cardCloseBtns = document.querySelectorAll(".card-reveal .close");
-	console.log(cards);
+	//console.log(cards);
 	cards.forEach((card, i) => {
 		card.addEventListener("click", event => {
 			const target = event.target;
