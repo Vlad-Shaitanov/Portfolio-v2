@@ -6,7 +6,7 @@
   */
 
 import { headAnimation, headText, headerSticky, burger } from "./components/headAnim.js";
-import { workCards, createCards } from "./components/works.js";
+import { workCards, createCards, cardsAnimation } from "./components/works.js";
 import accordion from "./components/history";
 
 const startPreloader = () => {
@@ -49,6 +49,7 @@ const renderCards = () => {
 		.then(works => {
 			works.forEach(createCards);
 			workCards();
+			cardsAnimation();
 		});
 };
 
@@ -90,10 +91,14 @@ window.addEventListener("DOMContentLoaded", () => {
 	headAnimation();
 	headText();
 	headerSticky();
-	burger();
 	renderCards();
+	burger();
 	titlesAnimation();
 	accordion("accordion-head--active", "accordion-content--active", 40);
 	//workCards();
+
+	window.addEventListener("scroll", () => {
+		cardsAnimation();
+	});
 });
 

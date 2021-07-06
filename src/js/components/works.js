@@ -4,7 +4,7 @@ const createCards = (works) => {
 	const { id, img, title, description, revInfo, sourceLink, siteLink } = works;
 	const cardsWrap = document.querySelector(".card-wrap");//Обертка
 	const card = document.createElement("div");
-	card.classList.add("card");
+	card.classList.add("card", "scroll-elem");
 	card.setAttribute("data-rev", `${id}`);
 
 	card.insertAdjacentHTML("beforeend", `
@@ -70,5 +70,26 @@ const workCards = () => {
 
 };
 
+const cardsAnimation = () => {
+	const cards = document.querySelectorAll(".card");
 
-export { workCards, createCards };
+	//console.log(cards);
+
+	const scrollItems = document.querySelectorAll(".scroll-elem");
+
+	let windowCenter = (window.innerHeight / 2) + window.scrollY;
+	console.log(windowCenter);
+
+	scrollItems.forEach((element, index) => {
+		let scrollOffset = element.offsetTop + (element.offsetHeight / 2);
+		if (windowCenter >= scrollOffset - 300) {
+			gsap.to(element, { duration: 0.3, delay: +`0.${index}`, opacity: 1, x: 0 });
+			console.log('add');
+		} else {
+			gsap.to(element, { duration: 0.3, delay: +`0.${index}`, opacity: 0, x: "-5%" });
+			console.log('remove');
+		}
+	});
+};
+
+export { workCards, createCards, cardsAnimation };
