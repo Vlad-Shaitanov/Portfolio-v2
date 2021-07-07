@@ -28,7 +28,7 @@
 		p {
 			font-size: 18px;
 			font-weight: 400;
-			text-indent: 20px;
+			// text-indent: 20px;
 			margin: 18px 0;
 		}
 	}
@@ -78,4 +78,15 @@
 			max-width: 100%;
 		}
 	}
+}
+
+.text {
+	// max-width: 850px;
+	margin: 0 auto;
+	font-size: 18px;
+	line-height: 1.5;
+}
+
+.text div {
+	display: inline-block;
 }

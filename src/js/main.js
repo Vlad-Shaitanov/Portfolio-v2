@@ -7,7 +7,7 @@
 
 import { headAnimation, headText, headerSticky, burger } from "./components/headAnim.js";
 import { workCards, createCards, cardsAnimation } from "./components/works.js";
-import accordion from "./components/history";
+import { accordion, historyTextAnim } from "./components/history";
 
 const startPreloader = () => {
 	//Обработка стартовой анимации
@@ -99,6 +99,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
 	window.addEventListener("scroll", () => {
 		cardsAnimation();
+		historyTextAnim();
 	});
 });
 

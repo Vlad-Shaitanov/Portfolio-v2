@@ -1,5 +1,6 @@
 "use strict";
 
+
 const accordion = (headActive, contentActive, paddings) => {
 	const accordionHeads = document.querySelectorAll(".accordion-head");
 
@@ -27,4 +28,83 @@ const accordion = (headActive, contentActive, paddings) => {
 
 };
 
-export default accordion;
+const historyTextAnim = () => {
+
+	//Блоки текста, которые нужно анимировать
+	const texts = document.querySelectorAll(".text");
+	const historyBlock = document.querySelector('.history');
+
+	//Разделяем текст на дивы
+	const splitText = (elem) => {
+		elem.innerHTML = elem.textContent.replace(/(\S*)/g, m => {
+			return `<div class="words">` +
+				m.replace(/(-|#|@)?\S(-|#|@)?/g, "<div class='letter'>$&</div>") +
+				`</div>`;
+		});
+		return elem;
+	};
+
+	//Массив из анимируемых блоков
+	const merge = [];
+
+	texts.forEach(text => {
+
+		merge.push(splitText(text));
+	});
+
+	//Поиск рандомного числа
+	function random(min, max) {
+		return (Math.random() * (max - min) + min);
+	}
+
+	let windowCenter = (window.innerHeight / 2) + window.scrollY;
+	let scrollOffset = historyBlock.offsetTop;
+	console.log(windowCenter, scrollOffset);
+
+	let count = 1;
+
+	const animation = () => {
+
+
+		// merge.forEach((item) => {
+
+		// 	if (windowCenter >= scrollOffset) {
+		// 		Array.from(item.querySelectorAll(".letter")).forEach((elem, index) => {
+		// 			TweenMax.from(elem, 1.5, {
+		// 				opacity: 0,
+		// 				scale: 0.1,
+		// 				x: random(-100, 100),
+		// 				y: random(-100, 100),
+		// 				z: random(-100, 100),
+		// 				delay: index * 0.01,
+		// 				repeat: 0,
+		// 			});
+		// 		});
+		// 	}
+		// });
+
+		if (windowCenter >= scrollOffset && count) {
+			merge.forEach((item) => {
+				Array.from(item.querySelectorAll(".letter")).forEach((elem, index) => {
+					TweenMax.from(elem, 1.5, {
+						opacity: 0,
+						scale: 0.1,
+						x: random(-100, 100),
+						y: random(-100, 100),
+						z: random(-100, 100),
+						delay: index * 0.01,
+						repeat: 0,
+					});
+				});
+
+			});
+		}
+
+		count--;
+		console.log(count);
+	};
+
+	animation();
+};
+
+export { accordion, historyTextAnim };
