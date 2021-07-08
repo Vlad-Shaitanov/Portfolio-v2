@@ -1,5 +1,8 @@
 "use strict";
 
+let count = true;
+//Массив из анимируемых блоков
+const merge = [];
 
 const accordion = (headActive, contentActive, paddings) => {
 	const accordionHeads = document.querySelectorAll(".accordion-head");
@@ -28,11 +31,10 @@ const accordion = (headActive, contentActive, paddings) => {
 
 };
 
-const historyTextAnim = () => {
 
+const historyTextTransform = () => {
 	//Блоки текста, которые нужно анимировать
 	const texts = document.querySelectorAll(".text");
-	const historyBlock = document.querySelector('.history');
 
 	//Разделяем текст на дивы
 	const splitText = (elem) => {
@@ -44,14 +46,14 @@ const historyTextAnim = () => {
 		return elem;
 	};
 
-	//Массив из анимируемых блоков
-	const merge = [];
-
 	texts.forEach(text => {
-
 		merge.push(splitText(text));
 	});
 
+};
+
+const historyTextAnimation = () => {
+	const historyBlock = document.querySelector('.history');
 	//Поиск рандомного числа
 	function random(min, max) {
 		return (Math.random() * (max - min) + min);
@@ -61,50 +63,35 @@ const historyTextAnim = () => {
 	let scrollOffset = historyBlock.offsetTop;
 	console.log(windowCenter, scrollOffset);
 
-	let count = 1;
+	if (windowCenter >= scrollOffset && count) {
+		merge.forEach((item) => {
 
-	const animation = () => {
 
-
-		// merge.forEach((item) => {
-
-		// 	if (windowCenter >= scrollOffset) {
-		// 		Array.from(item.querySelectorAll(".letter")).forEach((elem, index) => {
-		// 			TweenMax.from(elem, 1.5, {
-		// 				opacity: 0,
-		// 				scale: 0.1,
-		// 				x: random(-100, 100),
-		// 				y: random(-100, 100),
-		// 				z: random(-100, 100),
-		// 				delay: index * 0.01,
-		// 				repeat: 0,
-		// 			});
-		// 		});
-		// 	}
-		// });
-
-		if (windowCenter >= scrollOffset && count) {
-			merge.forEach((item) => {
-				Array.from(item.querySelectorAll(".letter")).forEach((elem, index) => {
-					TweenMax.from(elem, 1.5, {
-						opacity: 0,
-						scale: 0.1,
-						x: random(-100, 100),
-						y: random(-100, 100),
-						z: random(-100, 100),
-						delay: index * 0.01,
-						repeat: 0,
-					});
+			Array.from(item.querySelectorAll(".letter")).forEach((elem, index) => {
+				TweenMax.from(elem, 1.5, {
+					opacity: 0,
+					scale: 0.1,
+					x: random(-100, 100),
+					y: random(-100, 100),
+					z: random(-100, 100),
+					delay: index * 0.01,
+					repeat: 0,
 				});
 
+				TweenMax.to(elem, 1.5, {
+					opacity: 1,
+					scale: 1,
+					x: 0,
+					y: 0,
+					z: 0,
+					delay: index * 0.01,
+					repeat: 0,
+				});
 			});
-		}
-
-		count--;
-		console.log(count);
-	};
-
-	animation();
+		});
+		count = false;
+	}
+	console.log(count);
 };
 
-export { accordion, historyTextAnim };
+export { accordion, historyTextTransform, historyTextAnimation };
