@@ -1,0 +1,72 @@
+.contacts {
+	background-color: #fff;
+	display: flex;
+	flex-direction: column;
+	border-bottom: 1px solid #000;
+	font-size: 18px;
+	&-title {
+		max-width: 30%;
+		padding: 1rem 3rem;
+		margin: 0 auto;
+		border: 1px solid red;
+		border-radius: 0 0 15px 15px;
+		box-shadow: 0 0 15px rgba(255, 0, 0, 0.8);
+		color: #fff;
+		background-color: #000;
+		cursor: pointer;
+
+		&:hover {
+			box-shadow: 0 0 20px rgba(255, 0, 0, 1);
+		}
+	}
+
+	&-body {
+		height: 100%;
+		margin: auto auto;
+	}
+}
+
+.main-segment,
+.tel-segment,
+.mail-segment,
+.telegram-segment,
+.github-segment {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+}
+
+.main-segment {
+	background-color: #ff0000;
+	position: relative;
+}
+.tel-segment {
+	background-color: #7eef3c;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: translateY(-100%);
+}
+.mail-segment {
+	background-color: #168de2;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: translateX(-100%);
+}
+
+.telegram-segment {
+	background-color: #0088cc;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: translateX(100%);
+}
+
+.github-segment {
+	background-color: #373737;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: translateY(100%);
+}
