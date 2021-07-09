@@ -1,0 +1,23 @@
+.footer {
+	background-color: rgba($color: #000, $alpha: 0.9);
+	min-height: 70px;
+	display: grid;
+	grid-template: 1fr / minmax(50px, 1fr) 1fr minmax(50px, 1fr);
+	align-items: center;
+	justify-items: center;
+
+	&-title,
+	&-message,
+	&-year {
+		color: #fff;
+		grid-row: auto;
+		cursor: pointer;
+		font-size: 13px;
+
+		&:hover {
+			color: #ff0000;
+			transition: color 0.2s ease-in-out;
+			text-shadow: 2px 2px 5px #fcaaaa;
+		}
+	}
+}
