@@ -7,7 +7,8 @@
 
 import { headAnimation, headText, headerSticky, burger } from "./components/headAnim.js";
 import { workCards, createCards, cardsAnimation } from "./components/works.js";
-import { accordion, historyTextTransform, historyTextAnimation } from "./components/history";
+import { accordion, historyTextTransform, historyTextAnimation } from "./components/history.js";
+import contactsBlock from "./components/contacts.js";
 
 const startPreloader = () => {
 	//Обработка стартовой анимации
@@ -97,6 +98,7 @@ window.addEventListener("DOMContentLoaded", () => {
 	accordion("accordion-head--active", "accordion-content--active", 40);
 	historyTextTransform();
 	//workCards();
+	contactsBlock();
 
 	window.addEventListener("scroll", () => {
 		cardsAnimation();

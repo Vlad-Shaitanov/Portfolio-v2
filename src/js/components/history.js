@@ -61,7 +61,7 @@ const historyTextAnimation = () => {
 
 	let windowCenter = (window.innerHeight / 2) + window.scrollY;
 	let scrollOffset = historyBlock.offsetTop;
-	console.log(windowCenter, scrollOffset);
+	//console.log(windowCenter, scrollOffset);
 
 	if (windowCenter >= scrollOffset && count) {
 		merge.forEach((item) => {
@@ -91,7 +91,7 @@ const historyTextAnimation = () => {
 		});
 		count = false;
 	}
-	console.log(count);
+	//console.log(count);
 };
 
 export { accordion, historyTextTransform, historyTextAnimation };
