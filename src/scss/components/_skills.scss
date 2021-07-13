@@ -2,6 +2,8 @@
 	background-color: #fff;
 	display: flex;
 	flex-direction: column;
+	border-left: 1px solid rgba($color: #000000, $alpha: 0.5);
+	border-right: 1px solid rgba($color: #000000, $alpha: 0.5);
 	// h2 {
 	// 	//text-transform: uppercase;
 	// 	text-align: center;
@@ -113,6 +115,15 @@
 
 		img {
 			//max-width: 100%;
+		}
+	}
+}
+
+@media (max-width: 1025px) {
+	.skills {
+		&-title {
+			max-width: 50%;
+			padding: 1rem 2rem;
 		}
 	}
 }
